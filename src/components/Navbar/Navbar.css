@@ -1,0 +1,64 @@
+.navbar {
+    width: 100%;
+    max-width: 100vw;
+    background: #457b9d;
+    color: #F1FAEE;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.navbar .content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .content .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.navbar .links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar .links li a {
+    transition: all 0.3s ease 0s; 
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 130px; 
+}
+
+/* .links .sign-in-btn {
+    background-color: white;
+    color: #1D3557;
+    border: 0; 
+    box-shadow: 0; 
+    height: 35px;
+    width: 70px;
+    border-radius: 4px;
+} */
+
+.links .register-btn {
+    background-color: white;
+    color: #1D3557;
+    border: 0; 
+    box-shadow: 0;     
+    height: 35px;
+    width: 80px;
+    border-radius: 4px;
+}
+
