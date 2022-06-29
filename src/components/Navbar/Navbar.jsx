@@ -18,7 +18,7 @@ export default function Navbar() {
                 <div className="links">
                     <ul>
                         <li><Link to="/login">Sign In</Link></li>
-                        <li><button className="register-btn">Register</button></li>
+                        <li><Link to="/register"><button className="register-btn">Register</button></Link></li>
                     </ul>
                 </div>
             </div>
