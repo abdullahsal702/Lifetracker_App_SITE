@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
+const security = requrie("./middleware/security")
 const { PORT } = require("./config")
 const authRoutes = require("./routes/auth")
 
@@ -14,6 +15,9 @@ app.use(cors())
 app.use(express.json())
 //log request info
 app.use(morgan("tiny"))
+//for every request, check if a token exists in the authorization header 
+//if it does, attach the decoded user to res.locals 
+app.use(security.extractUserFromJwt)
 
 app.get("/", (req, res) => {
     res.status(200).json({ping: "pong"});
