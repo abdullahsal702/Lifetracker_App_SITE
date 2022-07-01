@@ -20,7 +20,7 @@ export default function Register({ user, setUser }) {
     useEffect(() => {
         //should navigate to /activity 
         if (user?.email) {
-            navigate("/")
+            navigate("/activity")
         }
     }, [user, navigate])
 
