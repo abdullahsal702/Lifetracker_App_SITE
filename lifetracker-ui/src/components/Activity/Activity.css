@@ -7,10 +7,18 @@
 }
 
 .activity-overview .header {
+    width: 100%; 
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+.activity-overview .activity-buttons button{
+    margin-left: 10px; 
+}
+
+
+
 
 

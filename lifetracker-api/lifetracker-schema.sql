@@ -19,3 +19,14 @@ CREATE TABLE nutrition (
     user_id INTEGER NOT NULL, 
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+CREATE TABLE exercise (
+    id SERIAL PRIMARY KEY, 
+    name TEXT NOT NULL, 
+    category TEXT NOT NULL, 
+    duration INTEGER NOT NULL, 
+    intensity TEXT NOT NULL, 
+    createdAt TEXT NOT NULL UNIQUE,
+    user_id INTEGER NOT NULL, 
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

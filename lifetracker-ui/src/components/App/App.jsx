@@ -6,6 +6,7 @@ import Login from "../Login/Login"
 import Register from "../Register/Register"
 import Activity from "../Activity/Activity"
 import Nutrition from "../Nutrition/Nutrition"
+import Exercise from "../Exercise/Exercise"
 import NotFound from "../NotFound/NotFound"
 import { useState, useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -27,6 +28,7 @@ function App() {
             <Route path="/register" element={<Register user={user} setUser={setUser}/>}></Route>
             <Route path="/activity" element={user ? <Activity/> : <NotFound/>}></Route>
             <Route path="/nutrition" element={user ? <Nutrition/> : <NotFound/>}></Route>
+            <Route path="/exercise" element={user ? <Exercise/> : <NotFound/>}></Route>
           </Routes> 
         </main>
       </BrowserRouter>
