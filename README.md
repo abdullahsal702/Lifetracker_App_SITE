@@ -48,19 +48,20 @@ http://g.recordit.co/lAFm5u3eyB.gif
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-[Add your response here]
+The labs definitely helped create this app. I've yet to finish adding the posts, but will have that up for the week 5 submission. The videos were really helpful and I didn't feel unprepared. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-[Add your response here]
+I would have tried to make the styling of the activity pages match that of my landing page. I also would have added more things to track. 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-[Add your response here]
+I didn't get to demo because of extenuating circumstances. 
 
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
+- https://fontawesome.com/icons
 
 ### Shout out
 
