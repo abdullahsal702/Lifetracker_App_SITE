@@ -2,8 +2,34 @@ const db = require("../db")
 const { BadRequestError, NotFoundError } = require("../utils/errors")
 
 class Exercise {
-    static async fetchExercises() {
+    static async fetchExercises({user}) {
+        const results = await db.query(
+            `
+                SELECT exercise.id,
+                       exercise.name,
+                       exercise.category, 
+                       exercise.duration, 
+                       exercise.intensity, 
+                       users.email 
+                FROM exercise 
+                JOIN users ON users.id = exercise.user_id
+                WHERE users.email = $1 
+                ORDER BY exercise.createdAt DESC
+            `, [user.email]
+        ) 
+        // const results = await db.query(
+        //     `
+        //         SELECT exercise.id, 
+        //                exercise.name, 
+        //                exercise.category,
+        //                exercise.duration, 
+        //                exercise.intensity 
+        //         FROM exercise 
+        //     `
+        // )
+        console.log(results)
 
+        return results.rows 
     }
 
     static async postExercise({user, post}) {
