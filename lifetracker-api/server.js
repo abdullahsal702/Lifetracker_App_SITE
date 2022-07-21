@@ -4,6 +4,7 @@ const morgan = require("morgan")
 const security = require("./middleware/security")
 const { PORT } = require("./config")
 const authRoutes = require("./routes/auth")
+const exerciseRoutes = require("./routes/exercise")
 
 const { BadRequestError, NotFoundError } = require("./utils/errors")
 
@@ -24,6 +25,7 @@ app.get("/", (req, res) => {
  });
 
 app.use("/auth", authRoutes)
+app.use("/exercise", exerciseRoutes)
 
 app.use((req, res, next) => {
     return next(new NotFoundError())

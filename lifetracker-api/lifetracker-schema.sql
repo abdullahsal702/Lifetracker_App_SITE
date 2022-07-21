@@ -15,7 +15,7 @@ CREATE TABLE nutrition (
     category TEXT NOT NULL, 
     calories INTEGER NOT NULL, 
     image_url TEXT NOT NULL, 
-    createdAt TEXT NOT NULL UNIQUE,
+    createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
     user_id INTEGER NOT NULL, 
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -26,7 +26,7 @@ CREATE TABLE exercise (
     category TEXT NOT NULL, 
     duration INTEGER NOT NULL, 
     intensity TEXT NOT NULL, 
-    createdAt TEXT NOT NULL UNIQUE,
+    createdAt TIMESTAMP NOT NULL DEFAULT NOW(),
     user_id INTEGER NOT NULL, 
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
