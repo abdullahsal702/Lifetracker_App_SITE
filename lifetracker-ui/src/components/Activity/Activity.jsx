@@ -22,6 +22,20 @@ export default function Activity({setAddingExercise}) {
                     <button>Add Sleep</button>
                 </div>
             </div>
+            <div className="activity-card-container">
+                <div className="activity-card">
+                    <p classNmae="card-label">Total Exercise Minutes</p>
+                    <h1></h1>
+                </div>
+                <div className="activity-card">
+                    <p>Avg Hours Slept</p>
+                    <h1>0</h1>
+                </div>
+                <div className="activity-card">
+                    <p>Avg Daily Calories</p>
+                    <h1>0</h1>
+                </div>
+            </div>
         </div>
     )
 }

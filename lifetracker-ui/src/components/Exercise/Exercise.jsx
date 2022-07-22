@@ -47,6 +47,7 @@ export function AddExercise({form, handleOnInputChange, handleOnSubmit}) {
 
     return (
         <div className="form">
+            <h1>Add Exercise</h1>
             <div>
                 <div className="input-field">
                     <label htmlFor="name">Name</label>
