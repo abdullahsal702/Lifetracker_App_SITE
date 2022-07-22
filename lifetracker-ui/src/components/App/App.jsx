@@ -15,6 +15,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 function App() {
 
   const [user, setUser] = useState({}) 
+  const [addingExercise, setAddingExercise] = useState(false)
 
   return (
     <div className="app">
@@ -26,9 +27,9 @@ function App() {
             <Route path="/" element={<Landing/>}></Route>
             <Route path="/login" element={<Login user={user} setUser={setUser}/>}></Route>
             <Route path="/register" element={<Register user={user} setUser={setUser}/>}></Route>
-            <Route path="/activity" element={user ? <Activity/> : <NotFound/>}></Route>
+            <Route path="/activity" element={user ? <Activity setAddingExercise={setAddingExercise}/> : <NotFound/>}></Route>
             <Route path="/nutrition" element={user ? <Nutrition/> : <NotFound/>}></Route>
-            <Route path="/exercise" element={user ? <Exercise/> : <NotFound/>}></Route>
+            <Route path="/exercise" element={user ? <Exercise addingExercise={addingExercise} setAddingExercise={setAddingExercise}/> : <NotFound/>}></Route>
           </Routes> 
         </main>
       </BrowserRouter>

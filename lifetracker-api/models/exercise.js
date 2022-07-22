@@ -17,16 +17,6 @@ class Exercise {
                 ORDER BY exercise.createdAt DESC
             `, [user.email]
         ) 
-        // const results = await db.query(
-        //     `
-        //         SELECT exercise.id, 
-        //                exercise.name, 
-        //                exercise.category,
-        //                exercise.duration, 
-        //                exercise.intensity 
-        //         FROM exercise 
-        //     `
-        // )
         console.log(results)
 
         return results.rows 
