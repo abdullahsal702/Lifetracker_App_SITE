@@ -2,6 +2,7 @@ import "./Exercise.css"
 import * as React from "react"
 import { useState, useEffect } from "react" 
 import { useExerciseContext } from "../../contexts/exercise";
+import apiClient from "../../services/apiClient"
 import axios from "axios"
 import { Link } from "react-router-dom"
 
@@ -49,10 +50,11 @@ export default function Exercise({addingExercise, setAddingExercise}) {
 
     async function getExercises() {
         try {
+            let token = await apiClient.token
             let config = {
                 headers: {
                   "Content-Type": "application/json",
-                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAZ21haWwuY29tIiwiaWF0IjoxNjU4NTU4MDU5LCJleHAiOjE2NTg2NDQ0NTl9.piYEqMTayBBOLwdjTKqoIwZ28epTQBRplcieQr5CZmI"
+                  "Authorization": `Bearer ${token}`
                 }
               }
             let response = await axios.get("http://localhost:3001/exercise", config)
