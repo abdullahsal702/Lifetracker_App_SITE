@@ -43,8 +43,8 @@ Week 4 Walkthrough
 http://g.recordit.co/lAFm5u3eyB.gif
 
 Week 5 Walkthrough 
-http://g.recordit.co/DD7qDInjxa.gif
-
+[http://g.recordit.co/DD7qDInjxa.gif
+](https://recordit.co/DD7qDInjxa)
 
 ### Reflection
 
