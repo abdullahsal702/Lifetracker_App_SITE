@@ -35,7 +35,7 @@ Implement any of the following features to improve the application:
 - [ ] Calculate aggregate statistics based on time periods - such as daily, weekly, monthly aggregates.
 - [ ] Create a page that shows all other users that use the life tracker application and allow users to follow each other.
 
-### Walkthrough Video
+### Walkthrough Videos
 
 Week 4 Walkthrough 
 http://g.recordit.co/lAFm5u3eyB.gif
