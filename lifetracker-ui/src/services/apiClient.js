@@ -4,6 +4,7 @@ class ApiClient {
     constructor(remoteHostUrl) {
         this.remoteHostUrl = remoteHostUrl
         this.token = null 
+        this.tokenName = "lifetracker-token";
     }
 
     setToken(token) {
@@ -38,6 +39,11 @@ class ApiClient {
     async registerUser(credentials) {
         return await this.request({ endpoint: `auth/register`, method: `POST`, data: credentials})
     }
+
+    async getExercises() {
+        return await this.request({ endpoint: `exercise`, method: `GET`})
+    }
+
 }
 
 export default new ApiClient(process.env.REACT_APP_REMOTE_HOST_URL || "http://localhost:3001")
