@@ -128,10 +128,12 @@ export function AddExercise({form, handleOnInputChange, handleOnSubmit}) {
 export function ExerciseCard({name, category, duration, intensity}) {
     return (
         <div className="exercise-card">
-            <p>{name}</p>
-            <p>{category}</p>
-            <p>{duration}</p>
-            <p>{intensity}</p>
+            <div className="card-header"> 
+                <h1>{name}</h1>
+            </div>
+            <p>Category: {category}</p>
+            <p>Duration: {duration}</p>
+            <p>Intensity: {intensity}</p>
         </div>
     )
 }
