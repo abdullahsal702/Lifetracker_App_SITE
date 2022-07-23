@@ -32,5 +32,23 @@
     color: #457b9d;
 }
 
+.exercise-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.exercise-card {
+    width: 400px; 
+    height: 250px;
+    border: 2px solid black;
+    margin-top: 50px;
+}
+
+.exercise-card p {
+    text-align: center;
+}
 
 

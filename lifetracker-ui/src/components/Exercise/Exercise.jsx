@@ -25,8 +25,25 @@ export default function Exercise({addingExercise, setAddingExercise}) {
         // console.log(form)
     }
 
+    async function postExercise() {
+        try {
+            let config = {
+                headers: {
+                  "Content-Type": "application/json",
+                  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFAZ21haWwuY29tIiwiaWF0IjoxNjU4NTU4MDU5LCJleHAiOjE2NTg2NDQ0NTl9.piYEqMTayBBOLwdjTKqoIwZ28epTQBRplcieQr5CZmI"
+                }
+              }
+            let response = await axios.post("http://localhost:3001/exercise", form, config)
+            console.log(response.data.results)
+            getExercises()
+        } catch(error) {
+            console.error(error)
+        }
+    }
+
     const handleOnSubmit = async (e) => {
         e.preventDefault() 
+        postExercise()
         setAddingExercise(false)
     }
 
@@ -56,16 +73,19 @@ export default function Exercise({addingExercise, setAddingExercise}) {
             <div className="exercise-header">
                 <h1>Exercise</h1>
             </div>
-            <div className="exercise-grid">
-                {exercises.map((exercise) => {
-                    return <p>{exercise.name}</p>
-                })}
-            </div>
             { !addingExercise ? 
-            <div className="exercise-overview">
-                <h1 className="overview-label">Overview</h1>
-                <button className="add-exercise-button" onClick={handleOnAdd}>Add Exercise</button>
-            </div> : 
+            <div> 
+                <div className="exercise-overview">
+                    <h1 className="overview-label">Overview</h1>
+                    <button className="add-exercise-button" onClick={handleOnAdd}>Add Exercise</button>
+                </div> 
+                <div className="exercise-grid">
+                    {exercises.map((exercise, index) => {
+                        return <ExerciseCard key={index} name={exercise.name} category={exercise.category} duration={exercise.duration} intensity={exercise.intensity}/>
+                    })}
+                </div>
+            </div>
+            : 
             <AddExercise form={form} handleOnInputChange={handleOnInputChange} handleOnSubmit={handleOnSubmit}/>
             }
      
@@ -99,6 +119,17 @@ export function AddExercise({form, handleOnInputChange, handleOnSubmit}) {
                 </div>
                 <button className="save-btn" onClick={handleOnSubmit}>Save</button>
             </div>
+        </div>
+    )
+}
+
+export function ExerciseCard({name, category, duration, intensity}) {
+    return (
+        <div className="exercise-card">
+            <p>{name}</p>
+            <p>{category}</p>
+            <p>{duration}</p>
+            <p>{intensity}</p>
         </div>
     )
 }
