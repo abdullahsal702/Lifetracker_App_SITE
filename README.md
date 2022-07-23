@@ -27,8 +27,7 @@ Deployed Application: [Lifetracker Deployed Site](http://gainful-trade.surge.sh/
 - [x] The detailed activity page should display a feed of all previous tracked activities.
 - [x] The detailed activity should contain a form to contain relevant information. (i.e if tracking nutrition this form allows the user to capture calories, timestamp, image, category, etc.) 
 - [x] The activity tracked should be given a unique id for easy lookup.
-  `TODO://` Add link to table schema in the link code below. Your file should end in `.sql` and show your schema for the detailed activities table. (🚫 Remove this paragraph after adding schema link)
-  * [Table Schema](📝ADD LINK TO TABLE SCHEMA.sql HERE!) 
+ <img width="618" alt="Screen Shot 2022-07-23 at 12 50 26 PM" src="https://user-images.githubusercontent.com/88620119/180614848-3820c957-133e-45cf-9602-ae0836b7b0ca.png">
 
 ### Stretch Features
 
